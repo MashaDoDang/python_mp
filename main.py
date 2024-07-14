@@ -5,15 +5,12 @@ import sqlite3
 from datetime import datetime
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from configure import API_KEY, BASE_URL
 
 '''
 This app shows weather data for cities, using the OpenWeatherMap API. 
 It stores the data in a SQLite database and displays it using matplotlib charts.
 '''
-
-# OpenWeatherMap API Key and URL
-API_KEY = 'b4a43259c1843abf827556cf786c5123'
-BASE_URL = 'https://api.openweathermap.org/data/3.0/onecall'
 
 # initialize the SQLite database and create the hourly_weather table if it doesn't exist
 def initialize_db():
